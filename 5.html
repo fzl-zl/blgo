@@ -6,6 +6,7 @@
     <title>Fzl</title>
     <link rel="icon" href="imges/icons.png" >
     <link rel="stylesheet" href="a/css/all.css">
+    <link rel="stylesheet" href="css/reset.css">
     <style>
         *{
             margin: 0;
@@ -77,7 +78,7 @@
             top: 200px;  
         }
         .content{
-            height: 2700px;
+            height: 2000px;
             background-color: #F5F5F5;
             background-image: linear-gradient(to bottom,#fff,#ACE3F4);
             padding-top: 40px;
@@ -158,63 +159,47 @@
             </h2>
     <i class="fas fa-broom"></i>
     <pre>
-开发中都是使用外部样式表
-常用选择器：
-        元素选择器：p{ }
-        id选择器：#id{ }
-        通配选择器：*{ }
-        类选择器：.abc{ }   使用的比较多
-复合选择器:
-        交集选择器：选择器1选择器2....选择器n{ } 
-        并集选择器（选择器分组）：选择器1，选择器2，....选择器n{ }
-一个元素的父元素也是它的祖先元素，子元素也是后代元素
-关系选择器：
-        子元素选择器：父元素>子元素{ }
-        后代元素选择器：祖先 后代{ }     使用较多
-        兄弟选择器：前一个+后一个{ }  p+span{ }  选择与之相邻的下面的一个span
-                   兄~第{ }  p~span{ }   选择p下面所有的兄弟元素
-属性选择器：
-        [属性名]{ }  选择含有指定属性色元素
-        [属性名=属性值]{ }  选择含有指定属性和属性值的元素
-        [属性名^=属性值]{ }  选择属性值以中括号内指定值开始的元素
-        [属性名&=属性值]{ }  选择属性值以中括号内指定值结尾的元素
-        [属性名*=属性值]{ }  选择属性值含有中括号内指定值的所有元素
-伪类用来描述一个元素的特殊状态
-伪类选择器：  
-        :first-child{ }  选取第一个子元素
-        :last-child{ }  选取最后一个子元素
-        :nth-child(n){ }  选取第n个子元素
-        :nth-child(2n){ }  even=2n 选取偶数个子元素
-        :nth-child(2n+1){ }  odd=2n+1 选取奇数个子元素
-        上面这四个是根据所有的子元素排序的
-        :first-of-type{ }    
-        :last-of-type{ }  
-        :nth-of-type(n){ }  
-        这三个用法同上，不同点是在同类型的的元素中进行排序
-        ：not(属性值)  将符合条件的元素从选择器中去除   ul>li:not(:nth-of-child){ }
-伪类：
-    :link   :visited  是a独有的
-    :hover  :active  适用于所有
-    在超链接中link，visited必须写在hover和active前面
-伪元素的使用：双冒号::
-                  ::first-letter  表示第一个字母 p::first-letter{ }
-                  ::first-line   表示第一行  p::first-line{ }
-                  ::selection  表示选择的内容   p::selection{ }
-                  ::before 元素的开始
-                  ::after  元素的最后  before和after需结合content属性来使用，表示添加的内容
-继承：为一个元素设置样式的同时也会被应用到他的后代元素上，继承是发生在祖先后代之间的
-背景，布局相关的这些样式不会被继承
-选择器的权重：
-             ！important   优先级最高，一般情况下不使用
-             内联样式：1000
-             id选择器：100
-             类选择器和伪类选择器：10
-             元素选择器：1
-             通配选择器：0
-             继承的样式：没有优先级
-             比较优先级时，要先将选择器的权重相加（分组选择器是单独计算的）
-             选择器的累加不会超过其最大数量级，例如类选择器再怎么累加也不会超过id选择器
-             优先级一样的时候，此时后面的样式会生效                   
+background-position:用来设置背景图片的位置  使用时必须指定两个值（top left right bottom center） 如果只写一个 则 后面一个默认为center    
+                    也可通过位移偏移量来设置：水平偏移量  垂直偏移量
+background-clip：设置背景的范围 可选值：
+                          border-box    默认值 背景会出现在边框里
+                          padding-box   背景不会出现在边框里  只出现在内容区和内边距
+                          content-box   背景只出现在内容区
+background-origin：设置背景图片位移偏移量计算的原点  可选值：
+                                             padding-box  默认值
+                                             content-box  背景图片的位移偏移量从内容区计算
+                                             border-box   背景图片的偏移量从边框开始计算
+background-size： 设置背景图片的大小  第一个值是宽度  第二个是高度  如果只写一个 则第二个默认值是auto   cover 图片比例不变 将元素铺满   contain  将图片在元素中完整显示
+background-attchment：设置背景图片是否随元素移动  可选值：
+                                           scrool   默认值  背景图片会随元素移动
+                                           fixed    背景会固定不会随元素移动
+背景简写  background：url(  ../..) #adbabd  center center/contain    无顺序要求  注意点：background-size必须写在background-position的后边并且使用斜杠 / 隔开
+                                                                           background-origin要写在background-clip前边
+浏览器在加载外部资源时时按需加载 不用则不加载
+线性渐变 颜色沿着一条直线发生变化 例如：background-image：linear-gradient（to left，red， yellow，orange）  可选值：to left
+渐变可以指定多个颜色 默认情况下平均分布 也可手动指定渐变的分布范围  例如                                             to right
+                                                   linear-gradient（red 10px，yellow 100px）        to bottom  默认值
+                                                                                                   to top
+                                                                                                   XXdeg  deg代表角度度数
+                                                                                                   turn   表示圈
+background-image：repeating-linear-gradient（）   可以平铺的线性渐变    对老版本ie兼容性不好
+径向渐变 默认情况下 径向渐变圆心的形状根据元素的形状来计算的  正方形是圆   长方形是椭圆  也可手动指定径向渐变的大小                       circle  默认值
+例如： background-image：radial- gradient（100px 100px  at 0 0，red，yellow）    表示范围是100px 圆心在（0，0）显示                 ellipse   椭圆
+radial- gradient（大小 at 位置，颜色 位置，颜色 位置）                                                                            closest-side  近边
+colspan 横向合并单元格                                                                                                          farthest-corner  远角
+rolspan 纵向合并单元格                                                                                                          closest-corner  近角
+<table>              <--定义表格 -->                                                                                           farthest-side   远边
+<tbody>             <--可写可不写 不写浏览器会自动加上-->
+<tr>              <--定义列 -->
+<td></td>     <--定义单元格-->
+</tr>             
+</tbody>
+</table>                                                                                                                               
+长表格：thead  头部
+tbody  主体
+tfoot  底部
+border-spacing：0 solide black; 指定边框之间的距离 边框不会重合
+border-collapse：collapse;  清除单元格之间的距离 边框会重合 
     </pre>           
 
     </div>
