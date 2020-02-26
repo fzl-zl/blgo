@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fzl</title>
     <link rel="icon" href="imges/icons.png" >
+    <link rel="stylesheet" href="a/css/all.css">
     <style>
         *{
             margin: 0;
             padding: 0;
             font-family: sans-serif;
         }
+        
         body{
-            overflow: scroll;
+            min-width: 1080px;
+            
         }
         .main{
-            height: 950px;
+            width: 100%;
+            height: 948px;
             background-image: linear-gradient(to bottom,#21b3e1,#fff);
-            
+            overflow: hidden;
+            position: relative;
             
         }
         .nav{
@@ -124,15 +129,15 @@
             top: 250px;
             left: -200px;
             animation: plan 2s ease-in;
-            
+            z-index: 5;
 
         }
         @keyframes plan { 
             from{
-                left: -200px;
+                left: 0px;
             }
             to{
-                left: 1803px;
+                left: 85%;
             }
             
         }      
@@ -144,17 +149,17 @@
         }
         .hot{
             position: absolute;
-            bottom: 20%;
+            bottom:20%;
             display: flex;
-            width: 100%;
+            left: 50%;
             justify-content: center;
             align-items: center;
-            margin: 0 auto;
+            transform: translateX(-50%);
             animation: ball 2s linear;
         }
         @keyframes ball {
             from{
-                bottom: -500px;
+                bottom: -400px;
             }
             to{
                 bottom:20%;
@@ -181,6 +186,65 @@
             display: table;
             clear: both;
 
+        }
+        
+        .content{
+            height: 1700px;
+            background-color: #F5F5F5;
+            background-image: linear-gradient(to bottom,#fff,#21b3e1);
+            padding-top: 40px;
+        }
+        h2{
+            
+            text-align: center;
+            color:skyblue ;
+            font-size: 40px;
+            font-weight: normal;
+        } 
+        .bottom{
+            height: 200px;
+            background-color: #E2E6FC;
+        }
+        .bottom p{
+            margin-top: 130px;
+            text-align: center;
+        }
+        .b img{
+           width: 100%;
+           vertical-align: bottom;
+        }
+        .b{
+            position: relative;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            
+        }
+        .b div{
+            width: 456px;
+            height: 256px;
+            margin-right: 10px;
+            border-radius: 30PX 30PX;
+            overflow: hidden;
+            
+        }
+        .b div:hover{
+            transform:scale(.9);
+            overflow: hidden;
+            box-shadow: 10px 10px 10px gray;
+            transition: .3s;
+        }
+        .b span{
+            position: absolute;
+            bottom: -10px;
+            left: 190px;
+            display: none;
+            transition: bottom 0.5s;
+        }
+        .b div:hover span{
+            bottom: 20px;
+            display: inline;
         }
     </style>
 </head>
@@ -213,12 +277,76 @@
             </div>
         </div>
         <img src="imges/cloud.png" alt="云朵" id="clouds">
-        <img src="imges/plane.png" alt="云朵" id="plane">
+        <img src="imges/plane.png" alt="飞机" id="plane">
         <div class="hot">
             <img src="imges/balloon.png" alt="热气球" class="one">
             <img src="imges/balloon.png" alt="热气球" class="two">
             <img src="imges/balloon.png" alt="热气球" class="three">
         </div>
     </div>
+    <div class="content w">
+        <h2>
+            <i class="fas fa-angle-double-left"></i>
+            Blog
+            <i class="fas fa-angle-double-right"></i>
+            
+        </h2>
+    <div class="b">
+        <div><a href="1.html"  target="_blank">
+              <img src="imges/html.jpg" alt="图片">
+              <span> html笔记</span>
+            </a>
+        </div>
+        <div>
+            <a href="2.html" target="_blank" >
+                <img src="imges/css.png" alt="图片">
+                <span> css笔记</span>
+            </a>
+        </div>
+        <div>
+            <a href="#" target="_blank" >
+                <img src="imges/css.png" alt="图片">
+                <span> css笔记</span>
+            </a>
+        </div>
+        <div>
+            <a href="#" target="_blank">
+                <img src="imges/css.png" alt="图片">
+                <span> css笔记</span>
+            </a>
+        </div>
+    </div>
+    <div class="b">
+        <div><a href="#" target="_blank">
+              <img src="imges/html.jpg" alt="图片">
+              <span> html笔记</span>
+            </a>
+        </div>
+        <div>
+            <a href="#" target="_blank">
+                <img src="imges/css.png" alt="图片">
+                <span> css笔记</span>
+            </a>
+        </div>
+        <div>
+            <a href="#" target="_blank">
+                <img src="imges/css.png" alt="图片">
+                <span> css笔记</span>
+            </a>
+        </div>
+        <div>
+            <a href="#" target="_blank" >
+                <img src="imges/css.png" alt="图片">
+                <span> css笔记</span>
+            </a>
+        </div>
+    </div>    
+        </div>
+    </div>
+    <div class="bottom clearfix">
+        <p>@2020 Fzl ,All Rights Reversed.</p>
+    </div>
+    
+    
 </body>
 </html>
