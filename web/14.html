@@ -15,7 +15,7 @@
         }
         
         body{
-            min-width: 1080px;
+            min-width: 1280px;
             
         }
         .main{
@@ -78,16 +78,18 @@
             top: 200px;  
         }
         .content{
-            height: 2500px;
+            height: 3000px;
             background-color: #F5F5F5;
             background-image: linear-gradient(to bottom,#fff,#ACE3F4);
             padding-top: 40px;
+           
             
             
         }
         .w{
-            width: 1200px;
-            margin: 0 auto;
+            width: 1100px;
+            margin:0 auto;
+            position: relative;
 
         }
         .w h2{
@@ -102,9 +104,9 @@
             line-height: 40px;
             font-family:  sans-serif ;
             color: #C88326;
-            position: relative;
-            word-wrap: break-word;
-            word-break: break-all;
+            position: absolute;
+            left: 0;
+            
             
             
         }
@@ -122,8 +124,13 @@
             display: table;
             clear: both;
         }
+        .fa-fan{
+            width: 40px;
+        }
         .fa-broom{
             font-size: 30px;
+            
+            
         }
     </style>
 </head>
@@ -157,22 +164,32 @@
     <div class="w">
             <h2>
                 <i class="fas fa-fan"></i>
-                   CSS笔记
+                   笔记
                 <i class="fas fa-fan"></i>
             </h2>
-    <i class="fas fa-broom"></i>
+            <i class="fas fa-broom"></i>
     <pre>
+
 position 定位: static    默认值
-        relativ   相对定位   不会使元素脱离文档流，会提升元素的层级 参照于元素在文档流中的位置进行定位 不会改变元素的性值  不设置偏移量位置不变
-        absolute  绝对定位   元素脱离文档流 绝对定位会改变元素的性值 行内元素变成块元素 块的宽高会被撑开 会提升元素层级  绝对定位元素是相对于其包含块进行定位的
-        fixed     固定定位   固定定位也是一种绝对定位 不同点是固定定位参照于浏览器视口（可视窗口）进行定位 不会随浏览器的滚动而滚动 例如广告
-        sticky    粘滞定位   和相对定位差不多 不同点是在元素到达某个固定位置时将其固定  兼容性不好 用的少
+                     relativ   相对定位   
+                                  不会使元素脱离文档流，会提升元素的层级 参照于元素在文档流中的位置进行定位 不会改变元素的性值  
+                                  不设置偏移量位置不变
+                    absolute  绝对定位   
+                                  元素脱离文档流 绝对定位会改变元素的性值 行内元素变成块元素 块的宽高会被撑开 会提升元素层级  
+                                  绝对定位元素是相对于其包含块进行定位的
+                     fixed     固定定位   
+                                  固定定位也是一种绝对定位 不同点是固定定位参照于浏览器视口（可视窗口）进行定位 
+                                  不会随浏览器的滚动而滚动 例如广告
+                      sticky    粘滞定位   
+                                   和相对定位差不多 不同点是在元素到达某个固定位置时将其固定  兼容性不好 用的少
 包含块：包含块是离当前元素最近的祖先块元素
 开启绝对定位的包含块：离它最近的开启了定位的祖先元素，如果所有的祖先元素都没有开启定位，则根元素就是他的包含块
-当开启绝对定位后：水平布局要满足： left + margin-left + border-left + padding-left + width + padding-right + border-right + margin-right + right = 父元素内容区宽度
+当开启绝对定位后：水平布局要满足： 
+    left + margin-left + border-left + padding-left + width + padding-right + border-right + margin-right + right = 父元素内容区宽度
          当发生过度约束时：如果9个值里没有auto 则自动调整right 有auto则调整auto
          可设置auto的值： left  margin  width  right  left和right都为auto时则水平居中
-         垂直布局也必须满足： top + margin-top +border-top + padding-top + height + padding-bottom + border-bottom + margin-bottle + bottom = 父元素内容区高度
+         垂直布局也必须满足： 
+top + margin-top +border-top + padding-top + height + padding-bottom + border-bottom + margin-bottle + bottom = 父元素内容区高度
 z-index：设置元素层级 值越大优先级越高   父元素层级再高也不会盖住后代元素
 font-fanmily:字体族  serif 衬线字体
               sans-serif   非衬线字体
@@ -201,13 +218,18 @@ iconfont：图标字体 使用：1、国外图标字体
                          用link将css文件引入
                          通过类名来使用图标字体  例如  <i class="iconfont icon-qitalaji"></i>
                          通过实体使用  例如   <i class="iconfont">&#x6222 ;</i>
-font简写 font:字体大小/行高 字体族   行高可以省略不写 不写代表使用默认值  必需写字体大小和字体族 字体族必需写最后面   font：50px/2px 'Time New Roman',serif
+font简写 font:字体大小/行高 字体族   行高可以省略不写 不写代表使用默认值  必需写字体大小和字体族 字体族必需写最后面   
+              font：50px/2px 'Time New Roman',serif
 text-align:文本水平对齐   可选值：left  right  center justify（两端对齐）
 vertical-align：垂直对齐  可选值：basline（默认值 子元素的基线和父元素的基线对齐） 
                                 top（子元素顶部与父元素顶部对齐）  
                                 bottom（子元素底部与父元素底部对齐）  
                                 middle（居中对齐)   引入图片后使用基线对齐会有间隙 可使用top或者bottom消除
-text-decoration：文本修饰  可选值:none    underlin(下划线)   line-through(删除线)  over-line(上划线)    ie不支持文本修饰的颜色设置  其他浏览器支持
+text-decoration：文本修饰  可选值:none    
+                                                        underlin(下划线)   
+                                                        line-through(删除线)  
+                                                        over-line(上划线)    
+                                                        ie不支持文本修饰的颜色设置  其他浏览器支持
 white-space：设置网页空白区域  可选值：normal（正常） mowrap（不换行） pre（保留空白）
 text-overflow：文本溢出
        设置文本溢出后不换行后面跟省略号：box{
@@ -215,7 +237,7 @@ text-overflow：文本溢出
                                            white-space:nowrap;
                                            overflow：hidden;
                                            text-overflow：ellipsis;
-                                            }
+                                            }        
     </pre>           
 
     </div>

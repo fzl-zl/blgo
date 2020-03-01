@@ -6,6 +6,7 @@
     <title>Fzl</title>
     <link rel="icon" href="imges/icons.png" >
     <link rel="stylesheet" href="a/css/all.css">
+    <link rel="stylesheet" href="css/reset.css">
     <style>
         *{
             margin: 0;
@@ -14,7 +15,7 @@
         }
         
         body{
-            min-width: 1080px;
+            min-width: 1280px;
             
         }
         .main{
@@ -77,16 +78,18 @@
             top: 200px;  
         }
         .content{
-            height: 2700px;
+            height: 1500px;
             background-color: #F5F5F5;
             background-image: linear-gradient(to bottom,#fff,#ACE3F4);
             padding-top: 40px;
+           
             
             
         }
         .w{
-            width: 1200px;
-            margin: 0 auto;
+            width: 1100px;
+            margin:0 auto;
+            position: relative;
 
         }
         .w h2{
@@ -101,7 +104,10 @@
             line-height: 40px;
             font-family:  sans-serif ;
             color: #C88326;
-            position: relative;
+            position: absolute;
+            left: 0;
+            
+            
             
         }
         .bottom{
@@ -118,8 +124,13 @@
             display: table;
             clear: both;
         }
+        .fa-fan{
+            width: 40px;
+        }
         .fa-broom{
             font-size: 30px;
+            
+            
         }
     </style>
 </head>
@@ -153,68 +164,12 @@
     <div class="w">
             <h2>
                 <i class="fas fa-fan"></i>
-                   CSS笔记
+                   笔记
                 <i class="fas fa-fan"></i>
             </h2>
-    <i class="fas fa-broom"></i>
+            <i class="fas fa-broom"></i>
     <pre>
-开发中都是使用外部样式表
-常用选择器：
-        元素选择器：p{ }
-        id选择器：#id{ }
-        通配选择器：*{ }
-        类选择器：.abc{ }   使用的比较多
-复合选择器:
-        交集选择器：选择器1选择器2....选择器n{ } 
-        并集选择器（选择器分组）：选择器1，选择器2，....选择器n{ }
-一个元素的父元素也是它的祖先元素，子元素也是后代元素
-关系选择器：
-        子元素选择器：父元素>子元素{ }
-        后代元素选择器：祖先 后代{ }     使用较多
-        兄弟选择器：前一个+后一个{ }  p+span{ }  选择与之相邻的下面的一个span
-                   兄~第{ }  p~span{ }   选择p下面所有的兄弟元素
-属性选择器：
-        [属性名]{ }  选择含有指定属性色元素
-        [属性名=属性值]{ }  选择含有指定属性和属性值的元素
-        [属性名^=属性值]{ }  选择属性值以中括号内指定值开始的元素
-        [属性名&=属性值]{ }  选择属性值以中括号内指定值结尾的元素
-        [属性名*=属性值]{ }  选择属性值含有中括号内指定值的所有元素
-伪类用来描述一个元素的特殊状态
-伪类选择器：  
-        :first-child{ }  选取第一个子元素
-        :last-child{ }  选取最后一个子元素
-        :nth-child(n){ }  选取第n个子元素
-        :nth-child(2n){ }  even=2n 选取偶数个子元素
-        :nth-child(2n+1){ }  odd=2n+1 选取奇数个子元素
-        上面这四个是根据所有的子元素排序的
-        :first-of-type{ }    
-        :last-of-type{ }  
-        :nth-of-type(n){ }  
-        这三个用法同上，不同点是在同类型的的元素中进行排序
-        ：not(属性值)  将符合条件的元素从选择器中去除   ul>li:not(:nth-of-child){ }
-伪类：
-    :link   :visited  是a独有的
-    :hover  :active  适用于所有
-    在超链接中link，visited必须写在hover和active前面
-伪元素的使用：双冒号::
-                  ::first-letter  表示第一个字母 p::first-letter{ }
-                  ::first-line   表示第一行  p::first-line{ }
-                  ::selection  表示选择的内容   p::selection{ }
-                  ::before 元素的开始
-                  ::after  元素的最后  before和after需结合content属性来使用，表示添加的内容
-继承：为一个元素设置样式的同时也会被应用到他的后代元素上，继承是发生在祖先后代之间的
-背景，布局相关的这些样式不会被继承
-选择器的权重：
-             ！important   优先级最高，一般情况下不使用
-             内联样式：1000
-             id选择器：100
-             类选择器和伪类选择器：10
-             元素选择器：1
-             通配选择器：0
-             继承的样式：没有优先级
-             比较优先级时，要先将选择器的权重相加（分组选择器是单独计算的）
-             选择器的累加不会超过其最大数量级，例如类选择器再怎么累加也不会超过id选择器
-             优先级一样的时候，此时后面的样式会生效                   
+        
     </pre>           
 
     </div>

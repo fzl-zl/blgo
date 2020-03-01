@@ -15,7 +15,7 @@
         }
         
         body{
-            min-width: 1080px;
+            min-width: 1280px;
             
         }
         .main{
@@ -78,16 +78,18 @@
             top: 200px;  
         }
         .content{
-            height: 2500px;
+            height: 2900px;
             background-color: #F5F5F5;
             background-image: linear-gradient(to bottom,#fff,#ACE3F4);
             padding-top: 40px;
+           
             
             
         }
         .w{
-            width: 1200px;
-            margin: 0 auto;
+            width: 1100px;
+            margin:0 auto;
+            position: relative;
 
         }
         .w h2{
@@ -102,7 +104,10 @@
             line-height: 40px;
             font-family:  sans-serif ;
             color: #C88326;
-            position: relative;
+            position: absolute;
+            left: 0;
+            
+            
             
         }
         .bottom{
@@ -119,8 +124,13 @@
             display: table;
             clear: both;
         }
+        .fa-fan{
+            width: 40px;
+        }
         .fa-broom{
             font-size: 30px;
+            
+            
         }
     </style>
 </head>
@@ -157,17 +167,19 @@
                    笔记
                 <i class="fas fa-fan"></i>
             </h2>
-    <i class="fas fa-broom"></i>
+            <i class="fas fa-broom"></i>
     <pre>
-form必须要有action属性     action表示提交的服务器地址                                                                                                                      
-&lt input type="" name=""&gt     type可选值：text             文本框
-                                       password         密码框
-                                       radio            单选框    必须要有相同的name属性 必须指定value属性  checked属性可以将单选按钮设置为默认选中
-                                       checkbox         复选框    必须要有相同的name属性 必须指定value属性  checked属性可以将单选按钮设置为默认选中
-                                       submit           提交按钮
-                                       button           按钮
-                                       reset            重置按钮
-                                       search           搜索框
+
+form必须要有action属性     action表示提交的服务器地址                                     
+&lt input type="" name=""&gt     type可选值：
+                                                  text             文本框
+                                                  password         密码框
+                                                  radio            单选框    必须要有相同的name属性 必须指定value属性  checked属性可以将单选按钮设置为默认选中
+                                                  checkbox         复选框    必须要有相同的name属性 必须指定value属性  checked属性可以将单选按钮设置为默认选中
+                                                  submit           提交按钮
+                                                  button           按钮
+                                                  reset            重置按钮
+                                                  search           搜索框        
 &lt button type=""&gt&lt/button &gt    type可选值:
                                         submit
                                         button
@@ -179,9 +191,10 @@ diaable   将表单设置为禁用 数据不会提交
 autofocus 将表单设置为自动获取焦点 （光标直接会在获取焦点的框）
 网站图标一般都存储在网站的根目录下 名字一般都叫 favicon.ico
 transition：过渡  
-transition-property:    指定要执行过度的属性（如width ，height ，color， all， margin-left...） 多个属性之间用逗号，隔开 大部分属性都支持过渡效果
+transition-property:    指定要执行过度的属性（如width ，height ，color， all， margin-left...） 
+                                    多个属性之间用逗号，隔开 大部分属性都支持过渡效果
 transition-duration：    指定过度要持续的时间
-transition-timing-function: 过渡的时序函数    可选值：  ease           默认值  慢速开始 先加速 后减速
+transition-timing-function: 过渡的时序函数    可选值：  
                                                       linear         匀速运动
                                                       ease-in        加速运动
                                                       ease-out       减速运动
@@ -189,6 +202,7 @@ transition-timing-function: 过渡的时序函数    可选值：  ease         
                                                       cubic-bezier(1,1,1,1)     贝塞尔曲线  https://cubic-bezier.com/#.17,.67,.83,.67
                                                       steps(n,end)        默认值是end  可以不写  在结束的时候跳步
                                                       steps(n,star)       在开始的时候跳步
+                                                      ease           默认值  慢速开始 先加速 后减速
 transition-delay：延时
 过渡简写:   transition:执行时间 执行属性 延时...; 执行时间和延时两者中  执行时间必须写前面 
 动画 animation  设置动画时首先要定义关键帧  然后再在css中用 animation-name：name；使用动画
@@ -205,15 +219,17 @@ animation-duration：动画执行时间
 animation-delay：延时
 animation-timing-function：和过渡一样  时序函数
 animation-iteration-count：动画执行次数  infinite代表执行无限次
-animation-direction：指定动画运行的方向  可选值：normal  默认值  从from向to执行 每次都是这样
+animation-direction：指定动画运行的方向  可选值：
                                                reverse  从to向from执行 每次都是这样
+                                               normal  默认值  从from向to执行 每次都是这样
                                                alternate  从from向to执行 重复执行动画时反向执行
                                                alternate-reverse 从to向from执行 重复执行动画时反向执行
 animation-play-state：设置动画执行状态  可选值：running   pause
-animation-fill-mode：动画填充模式   可选值：none  默认值 动画执行完毕回到原来位置  在延时的时候元素不会有变化
+animation-fill-mode：动画填充模式   可选值：
                                           forward  动画执行完毕停止在动画结束的位置
                                           backward  动画延时等待  元素会处于开始位置  元素会有变化 延时的过程中元素会变成关键帧里from或者to的状态
                                           both   结合forward和backward
+                                          none  默认值 动画执行完毕回到原来位置  在延时的时候元素不会有变化
     </pre>           
 
     </div>

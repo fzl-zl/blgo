@@ -15,7 +15,7 @@
         }
         
         body{
-            min-width: 1080px;
+            min-width: 1280px;
             
         }
         .main{
@@ -78,16 +78,18 @@
             top: 200px;  
         }
         .content{
-            height: 4800px;
+            height: 5000px;
             background-color: #F5F5F5;
-            background-image: linear-gradient(to bottom,#ffffff,#ACE3F4);
+            background-image: linear-gradient(to bottom,#fff,#ACE3F4);
             padding-top: 40px;
+           
             
             
         }
         .w{
-            width: 1200px;
-            margin: 0 auto;
+            width: 1100px;
+            margin:0 auto;
+            position: relative;
 
         }
         .w h2{
@@ -102,7 +104,10 @@
             line-height: 40px;
             font-family:  sans-serif ;
             color: #C88326;
-            position: relative;
+            position: absolute;
+            left: 0;
+            
+            
             
         }
         .bottom{
@@ -119,8 +124,13 @@
             display: table;
             clear: both;
         }
+        .fa-fan{
+            width: 40px;
+        }
         .fa-broom{
             font-size: 30px;
+            
+            
         }
     </style>
 </head>
@@ -154,11 +164,12 @@
     <div class="w">
             <h2>
                 <i class="fas fa-fan"></i>
-                   CSS笔记
+                   笔记
                 <i class="fas fa-fan"></i>
             </h2>
-    <i class="fas fa-broom"></i>
+            <i class="fas fa-broom"></i>
     <pre>
+
 em：em是相对元素字体大小来计算的，1em=1font-size（16px），em会根据字体大小的改变而改变
 rem：rem是相对于根元素字体大小来计算的
 RGB:rgb(255,255,255)  
@@ -193,10 +204,11 @@ border-style：
              double 双实线
 边框简写：  例如 border：10px red solid；
 内边距的设置会影响盒子大小
-盒子可见框的大小由内容区，内边距和边框大小共同决定，例如创建一个500xp乘以500px的盒子指的是可见框是500px✖500px
+盒子可见框的大小由内容区，内边距和边框大小共同决定，例如创建一个500xp乘以500px的盒子指的是可见框是500px * 500px
 一个元素在其父元素中，水平布局必须要满足：
     父元素的内容区宽度=margin-left + border-left + padding-left + width + padding-right + border-right + margin—right
-    如果等式不满足则称为过度约束，然后等式会自动调整（如果这七个值中没有auto，则浏览器会自动调整margin-right的值使等式成立；有auto就会调整auto）
+    如果等式不满足则称为过度约束，然后等式会自动调整
+    （如果这七个值中没有auto，则浏览器会自动调整margin-right的值使等式成立；有auto就会调整auto）
     如果设置一个宽度和外边距为auto，则宽度会调整到最大；三个值（margin-left，width，margin-right）都设为auto外边距为0，宽度最大
 溢出：
     overflow：visible  默认值子元素在父元素中溢出会被显示出来
@@ -229,9 +241,10 @@ box-shadow用来设置元素的阴影效果，不会影响页面布局
                                         第二个值代表垂直偏移量 正值向下移动 负值向上移动
                                         第三个值代表阴影的模糊半径  越大越模糊
                                         第四个值代表阴影的颜色
-border-radius用来设置圆角 例如 border-top（left right bottom）-diradius：10px 10px      第一个值代表水平半径
-                                                                                      第二个值代表垂直半径
-                                                                                      第一个值和第二个值相等时代表的是画圆，不等时是画椭圆
+border-radius用来设置圆角 例如 border-top（left right bottom）-diradius：10px 10px     
+                                                                       第一个值代表水平半径                                                                                    
+                                                                       第二个值代表垂直半径                                                                                     
+                                                                       第一个值和第二个值相等时代表的是画圆，不等时是画椭圆
 border-radius：10px 10px 10px 10px；   四个值：左上  右上  右下  左下
                                        三个值：左上  右上左下  右下
                                        两个值：左上右下  右上左下
@@ -269,7 +282,7 @@ clear:清除浮动元素对当前元素所产生的影响，原理是设置清�
                                                                     content:"";
                                                                     display：table;
                                                                     clear:both；
-                                                                    }
+                                                                    }       
     </pre>           
 
     </div>
