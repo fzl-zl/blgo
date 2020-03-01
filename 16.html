@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fzl</title>
+    <link rel="icon" href="imges/icons.png" >
+    <link rel="stylesheet" href="a/css/all.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        
+        body{
+            min-width: 1280px;
+            
+        }
+        .main{
+            width: 100%;
+            height: 548px;
+            background-image: linear-gradient(to bottom,#21b3e1,#fff);
+            overflow: hidden;
+            position: relative;   
+        }
+        .nav{
+            border-bottom: 1px solid #63D5FC;
+            display: flex;
+            padding: 0 200px;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+        }
+        .logo:hover,
+        .right:hover{
+            transition: 0.2s;
+            transform: translateY(-3px);
+        }
+        .nav ul{
+            display:flex;list-style-type:none; 
+        }
+        a{
+            text-decoration: none;
+            color: #85D9FC;
+            font-size: 20px;
+            display: block;
+        }
+        ul a{
+            padding: 26px 0;
+        }
+        .nav li{
+            margin: 0 30px;
+        }
+        ul a:hover{
+           color: burlywood; 
+           transform: translateY(-3px);
+           transition: 0.3s; 
+        }
+        .icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon a{
+            display: block;
+            margin: 10px;     
+        }
+        .icon a:hover{
+            transform: translateY(-3px);
+            transition: 0.3s;
+        }
+        #clouds{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 200px;  
+        }
+        .content{
+            height: 2900px;
+            background-color: #F5F5F5;
+            background-image: linear-gradient(to bottom,#fff,#ACE3F4);
+            padding-top: 40px;
+           
+            
+            
+        }
+        .w{
+            width: 1100px;
+            margin:0 auto;
+            position: relative;
+
+        }
+        .w h2{
+            text-align: center;
+            margin: 40px;
+            font-size: 40px;
+            position: relative;
+            color: rgb(13, 118, 189);
+        }
+        .w pre{
+            font-size: 17px;
+            line-height: 40px;
+            font-family:  sans-serif ;
+            color: #C88326;
+            position: absolute;
+            left: 0;
+            
+            
+            
+        }
+        .bottom{
+            height: 200px;
+            background-color: #E2E6FC;
+        }
+        .bottom p{
+            margin-top: 130px;
+            text-align: center;
+        }
+        .clearfix::before,
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .fa-fan{
+            width: 40px;
+        }
+        .fa-broom{
+            font-size: 30px;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <a href="#"><img src="imges/logo.png" alt="logo"></a>
+            </div>
+            <ul class="title">
+                <li   ><a href="#" class="first">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="right">
+                <a href="#"><img src="imges/menu.png" alt="菜单"></a>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="icon">
+                <a href="#"><img src="imges/instagram.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/facebook.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/twitter.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/youtube.png" alt="合作网站"></a>
+            </div>
+        </div>
+    </div>
+<img src="imges/cloud.png" alt="云朵" id="clouds">
+<div class="content">
+    <div class="w">
+            <h2>
+                <i class="fas fa-fan"></i>
+                   笔记
+                <i class="fas fa-fan"></i>
+            </h2>
+            <i class="fas fa-broom"></i>
+    <pre>
+
+form必须要有action属性     action表示提交的服务器地址                                     
+&lt input type="" name=""&gt     type可选值：
+                                                  text             文本框
+                                                  password         密码框
+                                                  radio            单选框    必须要有相同的name属性 必须指定value属性  checked属性可以将单选按钮设置为默认选中
+                                                  checkbox         复选框    必须要有相同的name属性 必须指定value属性  checked属性可以将单选按钮设置为默认选中
+                                                  submit           提交按钮
+                                                  button           按钮
+                                                  reset            重置按钮
+                                                  search           搜索框        
+&lt button type=""&gt&lt/button &gt    type可选值:
+                                        submit
+                                        button
+                                        reset        下面这种按钮的方式使用的多  button有闭标签 可在其中插入其他东西  input是自结束标签
+ select           下拉列表  必须要有相同的name属性 必须指定value属性  option标签表示选项            
+autocomplete="off" 关闭自动补全
+readonly  将表单设置为只读 数据会提交
+diaable   将表单设置为禁用 数据不会提交
+autofocus 将表单设置为自动获取焦点 （光标直接会在获取焦点的框）
+网站图标一般都存储在网站的根目录下 名字一般都叫 favicon.ico
+transition：过渡  
+transition-property:    指定要执行过度的属性（如width ，height ，color， all， margin-left...） 
+                                    多个属性之间用逗号，隔开 大部分属性都支持过渡效果
+transition-duration：    指定过度要持续的时间
+transition-timing-function: 过渡的时序函数    可选值：  
+                                                      linear         匀速运动
+                                                      ease-in        加速运动
+                                                      ease-out       减速运动
+                                                      ease-in-out     先加速 后减速
+                                                      cubic-bezier(1,1,1,1)     贝塞尔曲线  https://cubic-bezier.com/#.17,.67,.83,.67
+                                                      steps(n,end)        默认值是end  可以不写  在结束的时候跳步
+                                                      steps(n,star)       在开始的时候跳步
+                                                      ease           默认值  慢速开始 先加速 后减速
+transition-delay：延时
+过渡简写:   transition:执行时间 执行属性 延时...; 执行时间和延时两者中  执行时间必须写前面 
+动画 animation  设置动画时首先要定义关键帧  然后再在css中用 animation-name：name；使用动画
+                                   @keyframess name{    name是动画名字 
+                                              from{       from是指定开始位置的关键帧 from也可写成0%
+                                                     margin-left：0；
+                                              }
+                                              to{         to是指定结束位置的关键帧   to可写成100%
+                                                      margin-left：100Px；
+                                              }
+
+                                                   }
+animation-duration：动画执行时间
+animation-delay：延时
+animation-timing-function：和过渡一样  时序函数
+animation-iteration-count：动画执行次数  infinite代表执行无限次
+animation-direction：指定动画运行的方向  可选值：
+                                               reverse  从to向from执行 每次都是这样
+                                               normal  默认值  从from向to执行 每次都是这样
+                                               alternate  从from向to执行 重复执行动画时反向执行
+                                               alternate-reverse 从to向from执行 重复执行动画时反向执行
+animation-play-state：设置动画执行状态  可选值：running   pause
+animation-fill-mode：动画填充模式   可选值：
+                                          forward  动画执行完毕停止在动画结束的位置
+                                          backward  动画延时等待  元素会处于开始位置  元素会有变化 延时的过程中元素会变成关键帧里from或者to的状态
+                                          both   结合forward和backward
+                                          none  默认值 动画执行完毕回到原来位置  在延时的时候元素不会有变化
+    </pre>           
+
+    </div>
+    
+</div>
+<div class="bottom clearfix">
+    <p>@2020 Fzl ,All Rights Reversed.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fzl</title>
+    <link rel="icon" href="imges/icons.png" >
+    <link rel="stylesheet" href="a/css/all.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        
+        body{
+            min-width: 1280px;
+            
+        }
+        .main{
+            width: 100%;
+            height: 548px;
+            background-image: linear-gradient(to bottom,#21b3e1,#fff);
+            overflow: hidden;
+            position: relative;   
+        }
+        .nav{
+            border-bottom: 1px solid #63D5FC;
+            display: flex;
+            padding: 0 200px;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+        }
+        .logo:hover,
+        .right:hover{
+            transition: 0.2s;
+            transform: translateY(-3px);
+        }
+        .nav ul{
+            display:flex;list-style-type:none; 
+        }
+        a{
+            text-decoration: none;
+            color: #85D9FC;
+            font-size: 20px;
+            display: block;
+        }
+        ul a{
+            padding: 26px 0;
+        }
+        .nav li{
+            margin: 0 30px;
+        }
+        ul a:hover{
+           color: burlywood; 
+           transform: translateY(-3px);
+           transition: 0.3s; 
+        }
+        .icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon a{
+            display: block;
+            margin: 10px;     
+        }
+        .icon a:hover{
+            transform: translateY(-3px);
+            transition: 0.3s;
+        }
+        #clouds{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 200px;  
+        }
+        .content{
+            height: 5000px;
+            background-color: #F5F5F5;
+            background-image: linear-gradient(to bottom,#fff,#ACE3F4);
+            padding-top: 40px;
+           
+            
+            
+        }
+        .w{
+            width: 1100px;
+            margin:0 auto;
+            position: relative;
+
+        }
+        .w h2{
+            text-align: center;
+            margin: 40px;
+            font-size: 40px;
+            position: relative;
+            color: rgb(13, 118, 189);
+        }
+        .w pre{
+            font-size: 17px;
+            line-height: 40px;
+            font-family:  sans-serif ;
+            color: #C88326;
+            position: absolute;
+            left: 0;
+            
+            
+            
+        }
+        .bottom{
+            height: 200px;
+            background-color: #E2E6FC;
+        }
+        .bottom p{
+            margin-top: 130px;
+            text-align: center;
+        }
+        .clearfix::before,
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .fa-fan{
+            width: 40px;
+        }
+        .fa-broom{
+            font-size: 30px;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <a href="#"><img src="imges/logo.png" alt="logo"></a>
+            </div>
+            <ul class="title">
+                <li   ><a href="#" class="first">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="right">
+                <a href="#"><img src="imges/menu.png" alt="菜单"></a>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="icon">
+                <a href="#"><img src="imges/instagram.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/facebook.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/twitter.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/youtube.png" alt="合作网站"></a>
+            </div>
+        </div>
+    </div>
+<img src="imges/cloud.png" alt="云朵" id="clouds">
+<div class="content">
+    <div class="w">
+            <h2>
+                <i class="fas fa-fan"></i>
+                   笔记
+                <i class="fas fa-fan"></i>
+            </h2>
+            <i class="fas fa-broom"></i>
+    <pre>
+
+em：em是相对元素字体大小来计算的，1em=1font-size（16px），em会根据字体大小的改变而改变
+rem：rem是相对于根元素字体大小来计算的
+RGB:rgb(255,255,255)  
+    rgb(100%,100%,100%)
+    rgba(255,255,255,.5)  a的值有：1；0.5；0。      1表示完全不透明  0表示完全透明  .5表示半透明
+HSL:
+    H：色相
+    S：饱和度，颜色的浓度 0% - 100%
+    L：亮度，颜色的亮度 0% - 100%   hsl(0,50%,50%)
+对于元素有两个状态：在文档流中和不在文档流中
+元素在文档流中：
+             块元素:在页面中独占一行，自上而下垂直排列
+                    默认宽度是父元素的全部，会把父元素撑满
+                    默认高度是被内容（子元素）撑开
+             行内元素:行内元素不会独占一行，只占自身大小
+                     在页面中是自左向右排列，如果一行之内不能容下所有行内元素则会换到第二行
+                     行内元素的默认高度和宽度都是被内容撑开
+要设置边框至少要设置三个样式：
+                           边框宽度 border-width  （默认值一般是3px）
+                           边框颜色 border-color
+                           边框样式 border-style 
+border-width：
+             四个值：上 右 下 左  （顺时针）
+             三个值：上 左右 下
+             两个值：上下 左右
+             border-color，border-style的各个值同上
+border-color：可省略不写，如果省略了则自动使用color的颜色值            
+border-style：
+             solid 实线
+             dotted 圆点虚线
+             dashed 方块虚线
+             double 双实线
+边框简写：  例如 border：10px red solid；
+内边距的设置会影响盒子大小
+盒子可见框的大小由内容区，内边距和边框大小共同决定，例如创建一个500xp乘以500px的盒子指的是可见框是500px * 500px
+一个元素在其父元素中，水平布局必须要满足：
+    父元素的内容区宽度=margin-left + border-left + padding-left + width + padding-right + border-right + margin—right
+    如果等式不满足则称为过度约束，然后等式会自动调整
+    （如果这七个值中没有auto，则浏览器会自动调整margin-right的值使等式成立；有auto就会调整auto）
+    如果设置一个宽度和外边距为auto，则宽度会调整到最大；三个值（margin-left，width，margin-right）都设为auto外边距为0，宽度最大
+溢出：
+    overflow：visible  默认值子元素在父元素中溢出会被显示出来
+    overflow：hidden   溢出的内容被隐藏
+    overflow：scrool   生成滚动条 通过滚动条来查看完整的内容
+    overflow：auto     根据需要生成滚动条
+垂直外边距的重叠： 兄弟元素间的相邻垂直外边距：
+                          两者都是正值，取两者之间较大值
+                          如果一正一负取两者的和
+                          都为负值则取两者绝对值较大的
+                   兄弟元素的外边距重叠对于开发有益，不需要处理
+                父子元素间的相邻外边距：
+                          子元素外边距会传递给父元素（上外边距）
+                    不利于开发，要处理
+行内元素不支持设置高度和宽度，可以设置padding，border，margin，垂直方向不会影响布局，水平方向可以
+display：inline            设置为行内元素    
+display：block             设置为块元素
+display：inline-block      设置为行内块元素即可以设置宽高又不会独占一行 （使用的少）
+display：table             设置为表格
+display：none              隐藏 元素不在页面中显示 不占位置
+diaplay：table-cell        设置为单元格
+visibility：visible  默认值 元素在页面中正常显示 
+visibility： hidden  隐藏  元素不在页面中显示 占据位置
+要让文字在父元素中垂直居中，只需将父元素的line-height设置为和父元素height一样即可
+box-sizing：content-box    默认值，宽度和高度用来设置内容区的大小
+            border-box    宽度和高度用来设置盒子可见框的大小
+outline用来设置元素的轮廓线，用法和border一样，不同点是轮廓不会影响可见框的大小
+box-shadow用来设置元素的阴影效果，不会影响页面布局
+例如 box-shadow: 20px 10px  20px red;   第一个值代表水平偏移量 正值向右移动 负值向左移动
+                                        第二个值代表垂直偏移量 正值向下移动 负值向上移动
+                                        第三个值代表阴影的模糊半径  越大越模糊
+                                        第四个值代表阴影的颜色
+border-radius用来设置圆角 例如 border-top（left right bottom）-diradius：10px 10px     
+                                                                       第一个值代表水平半径                                                                                    
+                                                                       第二个值代表垂直半径                                                                                     
+                                                                       第一个值和第二个值相等时代表的是画圆，不等时是画椭圆
+border-radius：10px 10px 10px 10px；   四个值：左上  右上  右下  左下
+                                       三个值：左上  右上左下  右下
+                                       两个值：左上右下  右上左下
+border-radius：50%   代表一个圆
+float：none  默认值 不浮动
+       left  元素向左浮动
+       right 元素向右浮动
+       元素设置浮动后会脱离文档流，不再占用文档流的位置，水平布局等式不需要强制成立
+       设置浮动后元素会向父元素的左侧或右侧移动，且不会超过他前边的其他浮动元素
+       浮动元素默认不会从父元素中溢出
+       浮动元素上边若是一个没有浮动的元素，则浮动元素无法上移
+       浮动元素不会超过它上边的浮动的兄弟元素，最多和它在同一行
+       浮动元素不会盖住文字，可以用来设置文字环绕图片的效果
+脱离文档流的特点：   
+                块元素：
+                       块元素不再独占一行
+                       脱离文档流后，块元素的高度和宽度都被内容撑开
+                行内元素:
+                        块元素脱离文档流后会变成块元素，特点同上
+开启BFC该元素会变成一个独立的布局区域，不会被浮动元素覆盖，子元素和父元素外边距不会重叠，开启BFC的元素可以包含浮动元素
+开启BFC方式：浮动    float
+            将元素设置为行内块元素   display:inline-block
+            将元素的overflow设置为一个非visible值   overflow：hidden   常用方式
+clear:清除浮动元素对当前元素所产生的影响，原理是设置清除浮动后，浏览器会自动为元素添加一个上外边距
+高度塌陷解决方法：在div后面再加一个空的div
+                box::after{
+                    content:"";
+                    display：block;
+                    clear:both;
+                }                        比较完美的方法！
+解决外边距重叠：设置边框，将父元素和子元素的边框隔开
+               开启BFC
+最完美解决高度塌陷和外边距重叠的方法： 
+                                 .clearfix::before,.clearfix::after{
+                                                                    content:"";
+                                                                    display：table;
+                                                                    clear:both；
+                                                                    }       
+    </pre>           
+
+    </div>
+    
+</div>
+<div class="bottom clearfix">
+    <p>@2020 Fzl ,All Rights Reversed.</p>
+</div>
+</body>
+</html>

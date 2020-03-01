@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fzl</title>
+    <link rel="icon" href="imges/icons.png" >
+    <link rel="stylesheet" href="a/css/all.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        
+        body{
+            min-width: 1280px;
+            
+        }
+        .main{
+            width: 100%;
+            height: 548px;
+            background-image: linear-gradient(to bottom,#21b3e1,#fff);
+            overflow: hidden;
+            position: relative;   
+        }
+        .nav{
+            border-bottom: 1px solid #63D5FC;
+            display: flex;
+            padding: 0 200px;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+        }
+        .logo:hover,
+        .right:hover{
+            transition: 0.2s;
+            transform: translateY(-3px);
+        }
+        .nav ul{
+            display:flex;list-style-type:none; 
+        }
+        a{
+            text-decoration: none;
+            color: #85D9FC;
+            font-size: 20px;
+            display: block;
+        }
+        ul a{
+            padding: 26px 0;
+        }
+        .nav li{
+            margin: 0 30px;
+        }
+        ul a:hover{
+           color: burlywood; 
+           transform: translateY(-3px);
+           transition: 0.3s; 
+        }
+        .icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon a{
+            display: block;
+            margin: 10px;     
+        }
+        .icon a:hover{
+            transform: translateY(-3px);
+            transition: 0.3s;
+        }
+        #clouds{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 200px;  
+        }
+        .content{
+            height: 2300px;
+            background-color: #F5F5F5;
+            background-image: linear-gradient(to bottom,#fff,#ACE3F4);
+            padding-top: 40px;
+           
+            
+            
+        }
+        .w{
+            width: 1100px;
+            margin:0 auto;
+            position: relative;
+
+        }
+        .w h2{
+            text-align: center;
+            margin: 40px;
+            font-size: 40px;
+            position: relative;
+            color: rgb(13, 118, 189);
+        }
+        .w pre{
+            font-size: 17px;
+            line-height: 40px;
+            font-family:  sans-serif ;
+            color: #C88326;
+            position: absolute;
+            left: 0;
+            
+            
+            
+        }
+        .bottom{
+            height: 200px;
+            background-color: #E2E6FC;
+        }
+        .bottom p{
+            margin-top: 130px;
+            text-align: center;
+        }
+        .clearfix::before,
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .fa-fan{
+            width: 40px;
+        }
+        .fa-broom{
+            font-size: 30px;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <a href="#"><img src="imges/logo.png" alt="logo"></a>
+            </div>
+            <ul class="title">
+                <li   ><a href="#" class="first">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="right">
+                <a href="#"><img src="imges/menu.png" alt="菜单"></a>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="icon">
+                <a href="#"><img src="imges/instagram.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/facebook.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/twitter.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/youtube.png" alt="合作网站"></a>
+            </div>
+        </div>
+    </div>
+<img src="imges/cloud.png" alt="云朵" id="clouds">
+<div class="content">
+    <div class="w">
+            <h2>
+                <i class="fas fa-fan"></i>
+                   笔记
+                <i class="fas fa-fan"></i>
+            </h2>
+            <i class="fas fa-broom"></i>
+    <pre>
+
+background-position:用来设置背景图片的位置  使用时必须指定两个值（top left right bottom center） 
+                                   如果只写一个 则 后面一个默认为center    
+                                   也可通过位移偏移量来设置：水平偏移量  垂直偏移量
+background-clip：设置背景的范围 可选值：
+              border-box    默认值 背景会出现在边框里
+              padding-box   背景不会出现在边框里  只出现在内容区和内边距
+              content-box   背景只出现在内容区
+background-origin：设置背景图片位移偏移量计算的原点  可选值：
+                                 padding-box  默认值
+                                 content-box  背景图片的位移偏移量从内容区计算
+                                 border-box   背景图片的偏移量从边框开始计算
+background-size： 设置背景图片的大小  第一个值是宽度  第二个是高度  如果只写一个 则第二个默认值是auto   
+                                cover 图片比例不变 将元素铺满   contain  将图片在元素中完整显示
+background-attchment：设置背景图片是否随元素移动  可选值：
+                               scrool   默认值  背景图片会随元素移动
+                               fixed    背景会固定不会随元素移动
+背景简写  background：url(  ../..) #adbabd  center center/contain    
+          无顺序要求  注意点：background-size必须写在background-position的后边并且使用斜杠 / 隔开
+                                        background-origin要写在background-clip前边
+浏览器在加载外部资源时时按需加载 不用则不加载
+线性渐变 颜色沿着一条直线发生变化 例如：background-image：linear-gradient（to left，red， yellow，orange）  
+                               可选值：to left
+                               to right
+                               to bottom  默认值
+                               to top
+                               XXdeg  deg代表角度度数
+                               turn   表示圈
+渐变可以指定多个颜色 默认情况下平均分布 也可手动指定渐变的分布范围  例如                                            
+                                       linear-gradient（red 10px，yellow 100px）             
+background-image：repeating-linear-gradient（）   可以平铺的线性渐变    对老版本ie兼容性不好
+径向渐变 默认情况下 径向渐变圆心的形状根据元素的形状来计算的  正方形是圆   长方形是椭圆  也可手动指定径向渐变的大小
+                       circle  默认值
+                       ellipse   椭圆
+                       closest-side  近边
+                       farthest-corner  远角
+                       closest-corner  近角  
+例如： background-image：radial- gradient（100px 100px  at 0 0，red，yellow）  表示范围是100px 圆心在（0，0）显示                
+radial- gradient（大小 at 位置，颜色 位置，颜色 位置）                                                                            
+colspan 横向合并单元格                                                                                                          
+rolspan 纵向合并单元格                                                                                                                 
+长表格：thead  头部
+tbody  主体
+tfoot  底部
+border-spacing：0 solide black; 指定边框之间的距离 边框不会重合
+border-collapse：collapse;  清除单元格之间的距离 边框会重合 
+    </pre>           
+
+    </div>
+    
+</div>
+<div class="bottom clearfix">
+    <p>@2020 Fzl ,All Rights Reversed.</p>
+</div>
+</body>
+</html>

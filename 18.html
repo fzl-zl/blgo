@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fzl</title>
+    <link rel="icon" href="imges/icons.png" >
+    <link rel="stylesheet" href="a/css/all.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        
+        body{
+            min-width: 1280px;
+            
+        }
+        .main{
+            width: 100%;
+            height: 548px;
+            background-image: linear-gradient(to bottom,#21b3e1,#fff);
+            overflow: hidden;
+            position: relative;   
+        }
+        .nav{
+            border-bottom: 1px solid #63D5FC;
+            display: flex;
+            padding: 0 200px;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+        }
+        .logo:hover,
+        .right:hover{
+            transition: 0.2s;
+            transform: translateY(-3px);
+        }
+        .nav ul{
+            display:flex;list-style-type:none; 
+        }
+        a{
+            text-decoration: none;
+            color: #85D9FC;
+            font-size: 20px;
+            display: block;
+        }
+        ul a{
+            padding: 26px 0;
+        }
+        .nav li{
+            margin: 0 30px;
+        }
+        ul a:hover{
+           color: burlywood; 
+           transform: translateY(-3px);
+           transition: 0.3s; 
+        }
+        .icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon a{
+            display: block;
+            margin: 10px;     
+        }
+        .icon a:hover{
+            transform: translateY(-3px);
+            transition: 0.3s;
+        }
+        #clouds{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 200px;  
+        }
+        .content{
+            height: 4300px;
+            background-color: #F5F5F5;
+            background-image: linear-gradient(to bottom,#fff,#ACE3F4);
+            padding-top: 40px;
+           
+            
+            
+        }
+        .w{
+            width: 1100px;
+            margin:0 auto;
+            position: relative;
+
+        }
+        .w h2{
+            text-align: center;
+            margin: 40px;
+            font-size: 40px;
+            position: relative;
+            color: rgb(13, 118, 189);
+        }
+        .w pre{
+            font-size: 17px;
+            line-height: 40px;
+            font-family:  sans-serif ;
+            color: #C88326;
+            position: absolute;
+            left: 0;
+            
+            
+            
+        }
+        .bottom{
+            height: 200px;
+            background-color: #E2E6FC;
+        }
+        .bottom p{
+            margin-top: 130px;
+            text-align: center;
+        }
+        .clearfix::before,
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .fa-fan{
+            width: 40px;
+        }
+        .fa-broom{
+            font-size: 30px;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <a href="#"><img src="imges/logo.png" alt="logo"></a>
+            </div>
+            <ul class="title">
+                <li   ><a href="#" class="first">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="right">
+                <a href="#"><img src="imges/menu.png" alt="菜单"></a>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="icon">
+                <a href="#"><img src="imges/instagram.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/facebook.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/twitter.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/youtube.png" alt="合作网站"></a>
+            </div>
+        </div>
+    </div>
+<img src="imges/cloud.png" alt="云朵" id="clouds">
+<div class="content">
+    <div class="w">
+            <h2>
+                <i class="fas fa-fan"></i>
+                   笔记
+                <i class="fas fa-fan"></i>
+            </h2>
+            <i class="fas fa-broom"></i>
+    <pre>
+
+alert("");   弹出警告框
+documen.write("");    让计算机在HTML文档的body中写入内容
+consol.log("");    向控制台输出内容
+在script标签中加入src引入外部js文件后  不能再在script标签中写入其他内部js文件了  写了也不会执行
+js语言严格区分大小写 每条语句以英文分号“;”结尾 如果不写分号 浏览器会自动添加 消耗系统资源  有时候分号还会加错
+js会自动忽略空格和换行
+字面量是不可改变的值 和常量一样 字面量可直接使用 一般不直接使用字面量
+var  变量可以用来保存字面量 变量的值可以任意改变 变量更加方便使用 开发中都是通过变量去保存一个字面量 例如 var a=1;
+在使用输出语句输出变量时不需要加英文双引号  输出字符的时候要加双引号
+在js中所有可以自命名的都可称为标识符  例如 变量 函数名 属性名都属于标识符
+命名规则：标识符中可以含有数字 字幕 下划线 _  $符
+         标识符不能以数字开头
+         标识符不能是ES中的关键字 保留字（新版es一些保留字已经可以用上了）
+         驼峰命名法：首字母小写 每个单词开头字母大写 其余字母小写  （这条不是强制要求的，以上三条强制要求）
+js底层保存标识符时实际上时采用unicode编码，理论上 所有utf-8中含有的内容都可以作为标识符
+数据类型就是字面量的类型
+数据类型：String 字符串
+         Number 数值
+         Boolean 布尔值
+         Null 空值
+         Undefined 未定义
+         Object  对象
+String Number Boolean Null Undefined 属于基本数据类型   Object属于引用数据类型
+String  使用时需要引号引起来 使用双引号或者单引号都可，单引号双引号不可混用 同类型引号不能嵌套
+         单引号中可以嵌套双引号 双引号中可以嵌套单引号
+反斜杠 \  转义字符         \"   表示双引号
+                         \'    表示单引号
+                         \n    表示换行
+                         \t    表示制表符
+                         \\    表示\
+                         \u    后面接编码 表示编码符 编码是十六进制
+Number 在js中所有的数值都是Number类型 包括整数和浮点数（小数）
+typeof  检查变量的类型 属于一元运输符 返回值是String类型
+Number.MAX_VALUE 表示js中能表示的最大的值
+Number.MIN_VALUE 大于0的最小值 
+Infinity 表示正无穷  -Infinity  表示负无穷
+NaN 是一个特殊的数字 表示 Not A Number  使用typeof检查 NaN 时任然会输出 Number
+在js中整数的运算基本可以确保精确 进行浮点数运算时 可能得不到一个精确的结果
+Boolean 布尔值
+Null 类型的值只有一个 就是 null  null这个值专门用来表示一个为空的对象 使用typeof检查Null时 会返回object
+Undefined 类型的值只有一个 就是undefined 当声明一个变量 但是并不给变量赋值时 它的值就是undefined
+强制类型转换 将一个数据类型强制转换为其他的数据类型
+强制类型转换方式：toString() 将数据类型转变为String方法   例如 a.toString() null和undefined没有toString()方法
+                String()   调用String()函数   
+                           对于Number 和Boolean实际上就是调用toString()方法
+                           但是对于null和undefined 会直接将null转换为字符串null 将undefined转换为字符串undefined
+                Number()  调用Number()函数 (这种方式不适用于有字符的转换)      如果是纯数字的字符串 则直接将其转换为数字
+                                                                            如果字符串中有非数字的内容 则转换为NaN
+                                                                            如果字符串是一个空串或者时一个全是空格的字符 则转换为0
+                                                                            ture转为1 false转为0
+                                                                            Null转为0
+                                                                            undefined转为NaN
+                parseInt()    转为整数 遇到字符 小数点时 后面的值全部舍弃
+                parseFloat()  转为小数                  这两种方式专门用于字符串转换 对于非字符串会先转换为字符串类型 然后在操作
+                Boolean()       调用Boolean()函数          对于Number 除了0和NaN 其余都是true
+                                                          对于String 除了空串 其余都是true
+                                                          null和undefined都会转换为false
+                                                          object也会转换为true
+
+运算符 方法都有返回值
+在js中以0x开头来表示十六进制数 以0开头表示八进制数 以0b开头表示二进制 二进制有些浏览器不支持
+像“070”这样的数有些浏览器会当成8进制 有些会当成10进制 可以乘以10让浏览器正确识别
+对于非Number类型的值进行运算时，会将这些值转换为Number 然后进行运算  任何值和NaN运算都得NaN
+任何值和字符串相加都会转换成字符串 所以任意数据类型 +""空串即可转换为String类型
+% 取余数运算(取模运算)
+一元运算符只需要一个操作数
+对于一个其他的数据类型使用加号“+” 来将其来将其转换为number  它的原理和Number()函数一样
+通过自增可以使变量在自身的基础上增加1
+a++ 先赋值 后加一    ++a 先加一 后赋值
+a++ 的值等于原变量的值（自增前的值） ++a的值等于新值  （a-- 和--a 同加加原理一样）
+
+var d = 20；
+var result = d++ + ++d + d；// result = 20 + 22 + 22
+
+var d = 40;
+d = d++;  // d = 40
+! 非    如果对一个非布尔值进行运算 则会先将其转换为布尔值 然后再取反 可以为任意数据类型取反两次 将其转换为布尔值
+&& 与   js的与为短路的“与” 如果第一个值为false 则不会再看后面的值  
+        对于非布尔值进行与运算 会先将其转换为布尔值 然后再运算 但是返回值是原值 不是布尔值
+                 如果两个值都为true 则返回后面的原值  如果两个值中有false 则返回前面的false的原值
+|| 或   js的或为短路的“或” 如果第一个值为true 则不会再看后面的值
+        对于非布尔值进行或运算 如果第一个值为true 则返回第一个true的原值 如果第一个值为fales 则直接返回第二个的原值
+a=a+5 和 a+=5 是一样的  a*=5  a-=5  a/=5  a%=5  同理
+>   >=    &gt   &lt=  对于非数值进行比较时会转变成数值比较 任何值和NaN作比较时都是false
+                  如果两侧的值都是字符串时 则不会转换成数值 会转换成Unicode编码比较 
+                  比较编码时是一位一位的比较 可以利用这个特性对英文进行排序
+undefined 衍生自null 这两者作比较时 会返回true   NaN不和任何值相等 包括它本身 
+可通过isNaN()函数来判断一个值是否是NaN
+==  等于   != 不等于
+=== 全等 用来判断是否全等 和等于类似 不同于等于的是 不会做自动类型转换
+!== 不全等 和不等于类似 但不会做自动类型转换
+三元运算符    语法： 条件表达式?语句一:语句二；   如果条件表达式为true 则执行语句一 否则执行语句二 并且返回执行结果
+prompt() 可以弹出一个提示框 该提示框中会带有一个文本输入框
+var score=prompt(); prompt()的返回值是字符串 是String类型        
+    </pre>           
+
+    </div>
+    
+</div>
+<div class="bottom clearfix">
+    <p>@2020 Fzl ,All Rights Reversed.</p>
+</div>
+</body>
+</html>
