@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fzl</title>
+    <link rel="icon" href="imges/icons.png" >
+    <link rel="stylesheet" href="a/css/all.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        
+        body{
+            min-width: 1080px;
+            
+        }
+        .main{
+            width: 100%;
+            height: 948px;
+            background-image: linear-gradient(to bottom,#21b3e1,#fff);
+            overflow: hidden;
+            position: relative;
+            
+        }
+        .nav{
+            border-bottom: 1px solid #63D5FC;
+            display: flex;
+            padding: 0 200px;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+        }
+        .logo:hover,
+        .right:hover{
+            transition: 0.2s;
+            transform: translateY(-3px);
+        }
+        .nav ul{
+            display:flex;list-style-type:none; 
+        }
+        a{
+            text-decoration: none;
+            color: #85D9FC;
+            font-size: 20px;
+            display: block;
+        }
+        ul a{
+            padding: 26px 0;
+        }
+        .nav li{
+            margin: 0 30px;
+        }
+        ul a:hover{
+           color: burlywood; 
+           transform: translateY(-3px);
+           transition: 0.3s;
+           
+        }
+        .icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .icon a{
+            display: block;
+            margin: 10px;     
+        }
+        .icon a:hover{
+            transform: translateY(-3px);
+            transition: 0.3s;
+        }
+        .search{
+            width: 200px;
+            border-radius: 15px;
+            border: 1px solid #b7e7f6;
+            margin: 0 auto;
+            vertical-align: middle;
+            display: flex;
+        }
+        .search:hover{
+            border-color:white;
+        }
+        .search input{
+            width: 100%;
+            background-color: transparent;
+            border: 0;
+            outline: none;
+            height: 30px;
+            padding-left: 8px;
+            border-radius: 15px;
+            color: #b7e7f6;
+            
+        }
+        .search input:active{
+            border-color: white;
+        }
+        .search img{
+            vertical-align: middle;
+            margin: 5px;
+            width: 20px;
+        }
+        ::placeholder{
+            color: #b7e7f6;
+        }
+        #clouds{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 200px;
+            animation: cloud 2s linear;
+            
+        }
+        @keyframes cloud{
+            from{
+                top: -100px;
+            }
+            to{
+                top: 200px;
+            }
+            
+        }
+        #plane{
+            width: 200px;
+            position: absolute;
+            top: 250px;
+            left: -200px;
+            animation: plan 2s ease-in;
+            z-index: 5;
+
+        }
+        @keyframes plan { 
+            from{
+                left: 0px;
+            }
+            to{
+                left: 85%;
+            }
+            
+        }      
+        
+        button img{
+            width: 40px;
+            background-color: transparent;
+            border-radius: 50%;
+        }
+        .hot{
+            position: absolute;
+            bottom:20%;
+            display: flex;
+            left: 50%;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(-50%);
+            animation: ball 2s linear;
+        }
+        @keyframes ball {
+            from{
+                bottom: -400px;
+            }
+            to{
+                bottom:20%;
+            }
+            
+        }
+        .one{
+            width: 200px;
+            opacity: 0.4;
+            margin-right: 100px;
+
+        }
+        .three{
+            width: 300px;
+            opacity: 0.7;
+        }
+        .two{
+            width: 400px;
+            padding-left:55px;
+        }
+        .clearfix::before,
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+
+        }
+        
+        .content{
+            height: 1700px;
+            background-color: #F5F5F5;
+            background-image: linear-gradient(to bottom,#fff,#ACE3F4);
+            padding-top: 40px;
+        }
+        h2{
+            
+            text-align: center;
+            color:skyblue ;
+            font-size: 40px;
+            font-weight: normal;
+        } 
+        .bottom{
+            height: 200px;
+            background-color: #E2E6FC;
+        }
+        .bottom p{
+            margin-top: 130px;
+            text-align: center;
+        }
+        .b img{
+           width: 100%;
+           vertical-align: bottom;
+        }
+        .b{
+            position: relative;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            
+        }
+        .b div{
+            width: 456px;
+            margin-right: 10px;
+            border-radius: 30PX 30PX;
+            overflow: hidden;
+            position: relative;
+            
+        }
+        .b div:hover{
+            transform:scale(.95);
+            overflow: hidden;
+            box-shadow: 5px 5px 5px gray;
+            transition: .5s;
+            opacity: 0.93;
+        }
+        .b span{
+            position: absolute;
+            z-index: 9;
+            left:50%;
+            bottom: -15%;
+            overflow: hidden;
+            transform: scale(0) translateX(-50%) rotateZ(360deg);
+            transition: all 0.5s;
+            font-size: 25px;
+            
+        }
+        .b div:hover span{
+            bottom: 45%;
+            left: 50%;
+            color: #0db1e7;
+            transform: translateX(-50%) scale(1) rotateZ(360deg);
+            transition: all 0.5s;
+           
+        }
+        .w{
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <a href="#"><img src="imges/logo.png" alt="logo"></a>
+            </div>
+            <ul class="title">
+                <li   ><a href="#" class="first">Home</a></li>
+                <li><a href="#blog" class="bl">Blog</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="right">
+                <a href="#"><img src="imges/menu.png" alt="菜单"></a>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="icon">
+                <a href="#"><img src="imges/instagram.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/facebook.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/twitter.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/youtube.png" alt="合作网站"></a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="search">
+                <img src="imges/search.png" alt="搜索"> 
+            </div>
+        </div>
+        <img src="imges/cloud.png" alt="云朵" id="clouds">
+        <img src="imges/plane.png" alt="飞机" id="plane">
+        <div class="hot">
+            <img src="imges/balloon.png" alt="热气球" class="one">
+            <img src="imges/balloon.png" alt="热气球" class="two">
+            <img src="imges/balloon.png" alt="热气球" class="three">
+        </div>
+    </div>
+    <div class="content w" id="blog">
+        <h2>
+            <i class="fas fa-angle-double-left"></i>
+            Blog
+            <i class="fas fa-angle-double-right"></i>
+            
+        </h2>
+    <div class="b">
+        <div><a href="11.html"  target="_blank">
+              <img src="imges/computer1.png" alt="图片">
+              <span> Html笔记</span>
+            </a>
+        </div>
+        <div>
+            <a href="12.html" target="_blank" >
+                <img src="imges/book1.png" alt="图片">
+                <span> CSS 选择器</span>
+            </a>
+        </div>
+        <div>
+            <a href="13.html" target="_blank" >
+                <img src="imges/book2.png" alt="图片">
+                <span> CSS 边框 浮动</span>
+            </a>
+        </div>
+        
+    </div>
+    <div class="b">
+        <div>
+            <a href="14.html" target="_blank">
+                <img src="imges/computer2.png" alt="图片">
+                <span>CSS 定位 文本样式</span>
+            </a>
+        </div>
+        <div><a href="15.html" target="_blank">
+              <img src="imges/book3.png" alt="图片">
+              <span> CSS 背景 表格</span>
+            </a>
+        </div>
+        <div>
+            <a href="16.html" target="_blank">
+                <img src="imges/book4.png" alt="图片">
+                <span>CSS 表单 过渡 动画</span>
+            </a>
+        </div>
+    </div>
+    <div class="b">
+        <div>
+            <a href="17.html" target="_blank">
+                <img src="imges/book5.png" alt="图片">
+                <span>CSS 变形 弹性盒</span>
+            </a>
+        </div>
+        <div>
+            <a href="18.html" target="_blank" >
+                <img src="imges/computer3.png" alt="图片">
+                <span>JS 基本数据类型</span>
+            </a>
+        </div> 
+        <div>
+            <a href="19.html" target="_blank" >
+                    <img src="imges/computer4.png" alt="图片">
+                    <span>Javascript笔记</span>
+                </a>
+        </div>   
+    </div>
+    </div>    
+    </div>    
+        </div>
+    </div>
+    <div class="bottom clearfix">
+        <p>@2020 Fzl ,All Rights Reversed.</p>
+    </div>
+    
+
+</body>
+</html>
