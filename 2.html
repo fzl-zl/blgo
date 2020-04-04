@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fzl</title>
+    <link rel="icon" href="imges/icons.png" >
+    <link rel="stylesheet" href="a/css/all.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        
+        body{
+            min-width: 1080px;
+            
+        }
+        .main{
+            width: 100%;
+            height: 548px;
+            background-image: linear-gradient(to bottom,#21b3e1,#fff);
+            overflow: hidden;
+            position: relative;   
+        }
+        .nav{
+            border-bottom: 1px solid #63D5FC;
+            display: flex;
+            padding: 0 200px;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+        }
+        .logo:hover,
+        .right:hover{
+            transition: 0.2s;
+            transform: translateY(-3px);
+        }
+        .nav ul{
+            display:flex;list-style-type:none; 
+        }
+        a{
+            text-decoration: none;
+            color: #85D9FC;
+            font-size: 20px;
+            display: block;
+        }
+        ul a{
+            padding: 26px 0;
+        }
+        .nav li{
+            margin: 0 30px;
+        }
+        ul a:hover{
+           color: burlywood; 
+           transform: translateY(-3px);
+           transition: 0.3s; 
+        }
+        .icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon a{
+            display: block;
+            margin: 10px;     
+        }
+        .icon a:hover{
+            transform: translateY(-3px);
+            transition: 0.3s;
+        }
+        #clouds{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 200px;  
+        }
+        .content{
+            height: 2700px;
+            background-color: #F5F5F5;
+            background-image: linear-gradient(to bottom,#fff,#ACE3F4);
+            padding-top: 40px;
+            
+            
+        }
+        .w{
+            width: 1200px;
+            margin: 0 auto;
+
+        }
+        .w h2{
+            text-align: center;
+            margin: 40px;
+            font-size: 40px;
+            position: relative;
+            color: rgb(13, 118, 189);
+        }
+        .w pre{
+            font-size: 17px;
+            line-height: 40px;
+            font-family:  sans-serif ;
+            color: #C88326;
+            position: relative;
+            
+        }
+        .bottom{
+            height: 200px;
+            background-color: #E2E6FC;
+        }
+        .bottom p{
+            margin-top: 130px;
+            text-align: center;
+        }
+        .clearfix::before,
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .fa-broom{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <a href="#"><img src="imges/logo.png" alt="logo"></a>
+            </div>
+            <ul class="title">
+                <li   ><a href="#" class="first">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="right">
+                <a href="#"><img src="imges/menu.png" alt="菜单"></a>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="icon">
+                <a href="#"><img src="imges/instagram.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/facebook.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/twitter.png" alt="合作网站"></a>
+                <a href="#"><img src="imges/youtube.png" alt="合作网站"></a>
+            </div>
+        </div>
+    </div>
+<img src="imges/cloud.png" alt="云朵" id="clouds">
+<div class="content">
+    <div class="w">
+            <h2>
+                <i class="fas fa-fan"></i>
+                   CSS笔记
+                <i class="fas fa-fan"></i>
+            </h2>
+    <i class="fas fa-broom"></i>
+    <pre>
+开发中都是使用外部样式表
+常用选择器：
+        元素选择器：p{ }
+        id选择器：#id{ }
+        通配选择器：*{ }
+        类选择器：.abc{ }   使用的比较多
+复合选择器:
+        交集选择器：选择器1选择器2....选择器n{ } 
+        并集选择器（选择器分组）：选择器1，选择器2，....选择器n{ }
+一个元素的父元素也是它的祖先元素，子元素也是后代元素
+关系选择器：
+        子元素选择器：父元素>子元素{ }
+        后代元素选择器：祖先 后代{ }     使用较多
+        兄弟选择器：前一个+后一个{ }  p+span{ }  选择与之相邻的下面的一个span
+                   兄~第{ }  p~span{ }   选择p下面所有的兄弟元素
+属性选择器：
+        [属性名]{ }  选择含有指定属性色元素
+        [属性名=属性值]{ }  选择含有指定属性和属性值的元素
+        [属性名^=属性值]{ }  选择属性值以中括号内指定值开始的元素
+        [属性名&=属性值]{ }  选择属性值以中括号内指定值结尾的元素
+        [属性名*=属性值]{ }  选择属性值含有中括号内指定值的所有元素
+伪类用来描述一个元素的特殊状态
+伪类选择器：  
+        :first-child{ }  选取第一个子元素
+        :last-child{ }  选取最后一个子元素
+        :nth-child(n){ }  选取第n个子元素
+        :nth-child(2n){ }  even=2n 选取偶数个子元素
+        :nth-child(2n+1){ }  odd=2n+1 选取奇数个子元素
+        上面这四个是根据所有的子元素排序的
+        :first-of-type{ }    
+        :last-of-type{ }  
+        :nth-of-type(n){ }  
+        这三个用法同上，不同点是在同类型的的元素中进行排序
+        ：not(属性值)  将符合条件的元素从选择器中去除   ul>li:not(:nth-of-child){ }
+伪类：
+    :link   :visited  是a独有的
+    :hover  :active  适用于所有
+    在超链接中link，visited必须写在hover和active前面
+伪元素的使用：双冒号::
+                  ::first-letter  表示第一个字母 p::first-letter{ }
+                  ::first-line   表示第一行  p::first-line{ }
+                  ::selection  表示选择的内容   p::selection{ }
+                  ::before 元素的开始
+                  ::after  元素的最后  before和after需结合content属性来使用，表示添加的内容
+继承：为一个元素设置样式的同时也会被应用到他的后代元素上，继承是发生在祖先后代之间的
+背景，布局相关的这些样式不会被继承
+选择器的权重：
+             ！important   优先级最高，一般情况下不使用
+             内联样式：1000
+             id选择器：100
+             类选择器和伪类选择器：10
+             元素选择器：1
+             通配选择器：0
+             继承的样式：没有优先级
+             比较优先级时，要先将选择器的权重相加（分组选择器是单独计算的）
+             选择器的累加不会超过其最大数量级，例如类选择器再怎么累加也不会超过id选择器
+             优先级一样的时候，此时后面的样式会生效                   
+    </pre>           
+
+    </div>
+    
+</div>
+<div class="bottom clearfix">
+    <p>@2020 Fzl ,All Rights Reversed.</p>
+</div>
+</body>
+</html>
